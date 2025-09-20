@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Management System</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center mb-5">Hotel Management System</h1>
+      <a href="http://localhost:5000/" class="btn btn-primary">Go Back Home</a>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            id="customers-tab"
+            data-toggle="tab"
+            href="#customers"
+            role="tab"
+            aria-controls="customers"
+            aria-selected="true"
+            >Customers</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="employees-tab"
+            data-toggle="tab"
+            href="#employees"
+            role="tab"
+            aria-controls="employees"
+            aria-selected="false"
+            >Employees</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="hotels-tab"
+            data-toggle="tab"
+            href="#hotels"
+            role="tab"
+            aria-controls="hotels"
+            aria-selected="false"
+            >Hotels</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="rooms-tab"
+            data-toggle="tab"
+            href="#rooms"
+            role="tab"
+            aria-controls="rooms"
+            aria-selected="false"
+            >Rooms</a
+          >
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="customers"
+          role="tabpanel"
+          aria-labelledby="customers-tab"
+        >
+          <h2 class="mt-5">Customers</h2>
+          <a href="/customers" class="btn btn-primary">Create New Customer</a>
+          <table class="table table-bordered mt-3">
+            <thead>
+              <tr>
+                <th>SSN</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (var i=0; i< allCustomers.length; i++) { %>
+              <tr>
+                <td><%= allCustomers[i].ssn %></td>
+                <td><%= allCustomers[i].first_name %></td>
+                <td><%= allCustomers[i].last_name %></td>
+                <td><%= allCustomers[i].city %></td>
+                <td><%= allCustomers[i].country %></td>
+                <td>
+                  <div class="btn-group" role="group">
+                    <a href="/customers/1334832295129" class="btn btn-secondary">Update</a>
+                    <a href="/customer/delete/1334832295129" class="btn btn-danger">Delete</a>
+                  </div>
+                </td>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

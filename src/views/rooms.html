@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Room Search Results</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Room Search Results</h1>
+      <a href="http://localhost:5000/" class="btn btn-primary">Go Back Home</a>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Room Number</th>
+            <th>Hotel Chain</th>
+            <th>Area</th>
+            <th>Category</th>
+            <th>Capacity</th>
+            <th>Total Rooms</th>
+            <th>Amenities</th>
+            <th>Price</th>
+            <th>Book</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td>101</td>
+            <td>Hilton</td>
+            <td>New York</td>
+            <td>3</td>
+            <td>2</td>
+            <td>200</td>
+            <td>Wifi</td>
+            <td>$300</td>
+            <td><a href="#">Book Now</a></td>
+          </tr> -->
+           <!-- Loop through the JSON data and generate a row for each room -->
+        <% for (let i = 0; i < rooms.length; i++) { %>
+            <tr>
+              <td><%= rooms[i].room_no %></td>
+              <td><%= rooms[i].chain %></td>
+              <td><%= rooms[i].city %></td>
+              <td><%= rooms[i].category %></td>
+              <td><%= rooms[i].capacity %></td>
+              <td><%= rooms[i].number_rooms %></td>
+              <td><%= rooms[i].amenities %></td>
+              <td><%= rooms[i].price %></td>
+              <td><a href="http://localhost:5000/customers">Book Now</a></td>
+            </tr>
+          <% } %>
+          
+        </tbody>
+      </table>
+    </div>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

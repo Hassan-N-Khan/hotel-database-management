@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Customer</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Update Customer</h1>
+    <form method="PUT" action="/customers/<%= thisCustomer[0].ssn %>">
+      <div class="form-group">
+        <label for="SSN">SSN:</label>
+        <input value="<%= thisCustomer[0].ssn %>" type="text" class="form-control" id="SSN" name="SSN" required>
+      </div>
+      <div class="form-group">
+        <label for="first_name">First Name:</label>
+        <input value="<%= thisCustomer[0].first_name %>"type="text" class="form-control" id="first_name" name="first_name" required>
+      </div>
+      <div class="form-group">
+        <label for="middle_initial">Middle Initial:</label>
+        <input value="<%= thisCustomer[0].middle_initial %>" type="text" class="form-control" id="middle_initial" name="middle_initial">
+      </div>
+      <div class="form-group">
+        <label for="last_name">Last Name:</label>
+        <input value="<%= thisCustomer[0].last_name %>" type="text" class="form-control" id="last_name" name="last_name" required>
+      </div>
+      <div class="form-group">
+        <label for="street_name">Street Name:</label>
+        <input value="<%= thisCustomer[0].street_name %>" type="text" class="form-control" id="street_name" name="street_name" required>
+      </div>
+      <div class="form-group">
+        <label for="street_number">Street Number:</label>
+        <input value="<%= thisCustomer[0].street_number %>" type="text" class="form-control" id="street_number" name="street_number" required>
+      </div>
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input value="<%= thisCustomer[0].city %>" type="text" class="form-control" id="city" name="city" required>
+      </div>
+      <div class="form-group">
+        <label for="postal_code">Postal Code:</label>
+        <input value="<%= thisCustomer[0].postal_code %>" type="text" class="form-control" id="postal_code" name="postal_code" required>
+      </div>
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <input value="<%= thisCustomer[0].country %>" type="text" class="form-control" id="country" name="country" required>
+      </div>
+      <div class="form-group">
+        <label for="registration_date">Registration Date:</label>
+        <input value="<%= thisCustomer[0].registration_date %>" type="date" class="form-control" id="registration_date" name="registration_date" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

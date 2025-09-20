@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hotel Room Search</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Hotel Room Search</h1>
+    <form id="search-form" action="/rooms" method="post">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="checkin">Check-In Date</label>
+          <input name="start_date" type="date" class="form-control" id="start_date">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="checkout">Check-Out Date</label>
+          <input name="end_date" type="date" class="form-control" id="end_date">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="capacity">Capacity</label>
+          <select name="capacity" class="form-control" id="capacity">
+            <option value="">Select capacity</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="area">City</label>
+          <input name="area" type="text" class="form-control" id="area">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="hotel-chain">Hotel Chain</label>
+          <input name="chain" type="text" class="form-control" id="chain">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="category">Category</label>
+          <select name="category" class="form-control" id="category">
+            <option value="">Select category</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="num-rooms">Number of Rooms</label>
+          <input name="total_rooms" type="number" class="form-control" id="total_rooms">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="price">Price</label>
+          <input name="price" type="number" class="form-control" id="price">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <div class="mt-5" id="search-results"></div>
+  </div>
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popper
